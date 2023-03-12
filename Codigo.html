@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Códigos HTML sobre mi proyecto.</title>
+</head>
+<body style="color:rgb(0, 0, 0);">
+  <header>
+    <h1 style=color:blueviolet>Bienvenidos a mi página web</h1>
+    <p><h2>Soy Johan Muñoz Mayen, estudio en el plantel Conalep Naucalpan I y en esta página encontrarás Códigos HTML y más.</h2></p>
+    
+  </header>
+  
+  <main>
+    <h1 style="color:blueviolet">Mis códigos HTML básicos:</h1>
+    <p> <h2>En esta sección encontrarás algunos ejemplos de mis códigos HTML:</h2></p>
+    <ul>
+    <p><!DOCTYPE html>
+        <html>
+        <head>
+            <title>Cómo hacer un programa en C++ para diferenciar entre una cadena y un número</title>
+        </head>
+        <body>
+            <h1 style=color:blueviolet>Cómo hacer un programa en C++ para diferenciar entre una cadena y un número</h1>
+        
+        <p>En C++, podemos diferenciar entre una cadena y un número utilizando las funciones disponibles en la biblioteca estándar. En este ejemplo, vamos a crear un programa que le pedirá al usuario que ingrese un dato y determinará si es una cadena o un número.</p>
+        
+        <h2>Paso 1: Incluir las bibliotecas necesarias</h2>
+        
+        <p>Para trabajar con cadenas y números, necesitaremos incluir las bibliotecas string y iostream en nuestro programa:</p>
+        
+        <pre>
+            <code>#include &lt;string&gt;
+            #include &lt;iostream&gt;
+        
+            using namespace std;</code>
+        </pre>
+        
+        <h2>Paso 2: Crear una función para verificar si el dato es un número</h2>
+        
+        <p>Podemos usar la función stoi() para convertir una cadena en un número entero. Si el dato ingresado no puede ser convertido en un número, la función lanzará una excepción. Para evitar esto, podemos crear una función que verifique si el dato es un número antes de intentar convertirlo:</p>
+        
+        <pre>
+            <code>bool es_numero(const string&amp; str) {
+                for (char const &amp; c : str) {
+                    if (isdigit(c) == 0) return false;
+                }
+                return true;
+            }</code>
+        </pre>
+        
+        <p>Esta función recibe una cadena como parámetro y devuelve true si la cadena es un número, o false si no lo es.</p>
+        
+        <h2>Paso 3: Crear el programa principal</h2>
+        
+        <p>En el programa principal, utilizaremos un bucle for para pedir al usuario que ingrese un dato y verificar si es un número. Si el dato no es un número, se darán tres oportunidades para ingresar un valor válido antes de finalizar el programa:</p>
+        
+        <pre>
+            <code>int main() {
+                string dato;
+                bool es_numero_flag = false;
+                int intentos = 0;
+        
+                cout << "Ingrese un dato: ";
+                cin >> dato;
+        
+                while (intentos &lt; 3) {
+                    if (es_numero(dato)) {
+                        cout << "El dato ingresado es un número." << endl;
+                        es_numero_flag = true;
+                        break;
+                    } else {
+                        intentos++;
+                        cout << "El dato ingresado no es un número. Intente nuevamente: ";
+                        cin >> dato;
+                    }
+                }
+        
+                if (!es_numero_flag) {
+                    cout << "Se han agotado los intentos. El programa se cerrará." << endl;
+                }
+        
+                return 0;
+            }</code>
+        </pre>
+        
+        <p><h3>En este programa, primero se pide al usuario que ingrese un dato. Luego, se llama a la función es_numero() para verificar si el dato es un número. Si es así, se muestra un mensaje indicando que el dato es un número y se establece la bandera es_numero_flag en true. Si no es un número, se le pide al usuario que ingrese el dato nuevamente y se incrementa la variable intentos. Si la variable intentos alcanza el valor de 3, se muestra un mensaje de error.
+        </h3></p>
+        </body>
+        </html>
+        
+            
